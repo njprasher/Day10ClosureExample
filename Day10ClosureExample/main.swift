@@ -52,8 +52,21 @@ func backward(_ s1: String, _ s2: String) -> Bool {
 }
 
 print(names)
+//
+
 var reversedNames = names.sorted(by: backward)
 print(reversedNames)
+
+//
+
+reversedNames = names.sorted(by:
+    {
+        (a: String, b: String) -> Bool in
+        return a < b
+})
+print(reversedNames)
+
+//
 
 reversedNames = names.sorted(by:
     {
@@ -61,3 +74,40 @@ reversedNames = names.sorted(by:
         return a < b
     })
 print(reversedNames)
+
+//
+
+reversedNames = names.sorted(by:
+    {
+        (a, b) in
+        return a < b
+})
+print(reversedNames)
+
+//
+
+reversedNames = names.sorted(by:
+    {
+        return $0 < $1
+})
+print(reversedNames)
+
+//
+
+reversedNames = names.sorted(by:
+    {
+        $0 < $1
+})
+print(reversedNames)
+
+//
+
+reversedNames = names.sorted(by: <)
+print(reversedNames)
+
+//
+
+reversedNames = names.sorted(by: >)
+print(reversedNames)
+
+
