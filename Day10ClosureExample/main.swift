@@ -118,3 +118,17 @@ names1.sort()
 
 print(names1)
 
+var cities = ["Delhi","Bangalore","Hyderabad","Dehradun","Bihar"]
+print(cities)
+var groupedCities = Dictionary(grouping: cities ) { $0.first! }
+print(groupedCities)
+
+//Sequence Based Initialization
+var Distance = [2000, 10, 620, 1000, 200]
+let cityDistanceDict = Dictionary(uniqueKeysWithValues: zip(cities, Distance))
+print(cityDistanceDict)
+
+
+//Dictionary Filtering
+var closeCities = cityDistanceDict.filter { $0.value < 1000 }
+print(closeCities)
