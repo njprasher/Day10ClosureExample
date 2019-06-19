@@ -57,7 +57,7 @@ print(reversedNames)
 
 reversedNames = names.sorted(by:
     {
-        (a: String, b: String) -> Bool in
+        (a, b) -> Bool in
         return a < b
     })
 print(reversedNames)
