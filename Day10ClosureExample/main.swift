@@ -110,4 +110,11 @@ print(reversedNames)
 reversedNames = names.sorted(by: >)
 print(reversedNames)
 
+//
+
+
+var names1 = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+names1.sort()
+
+print(names1)
 
